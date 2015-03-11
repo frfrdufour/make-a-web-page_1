@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title> FD's IPND Learnings</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="IPND-P1-FD.css">
+</head>
+<body>
+  <div class="lesson">
+    <div class="lesson-title">
+    <h1>Lesson 1
+      <br>
+      Intro</h1>
+    </div>
+    <div class="concept">
+      <div class="concept-title"> 
+      <h2>How the web works</h2>
+      </div>
+          <p>
+          The web transmits HTML files with the HTTP protocol so computer browsers can communicate with and display information stored on servers.
+          </p>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+      <h2>The HTML language </h2>
+      </div>
+        It’s made up of:
+        <ol>
+          <li>text (what you see)</li>
+          <li>markup  (what it looks like)
+            <ul>
+              <li>made up of Tags - opening tag and closing tag "name" content "/name"</li>
+              <li>Element (whole thing above is an element)</li>
+              <li> Attributes: "TAG attribute=“value”TAG content /TAG</li>
+            </ul>
+          </li>
+          <li>references to other documents</li>
+          <li>links to other pages</li>
+        </ol>
+    </div>
+  </div>
+  <div class="lesson">
+    <div class="lesson-title">
+    <h1>Lesson 2</h1>
+    </div>
+      <div class="concept">
+        <div class="concept-title">
+        <h2>Structure of Webpages</h2>
+        </div>
+             <p>
+             Pages are made of rectangle boxes. Each one can have its own style. It's best to give them a class name as attribute.<br> 
+             HTML defines what the rooms are and where they are. It's best to create and mark blocks with 'div' tags.<br>
+             CSS defines how they look.<br> 
+             A page is typically structured like this<br>
+            <a href="https://www.flickr.com/photos/frfrdufour/16066420684" title="HTML Document structure by Francois, on Flickr"><img src="https://farm9.staticflickr.com/8654/16066420684_dcd0807059_o.png" width="314" height="272" alt="HTML Document structure"></a>
+            </p>
+        </div>
+      <div class="concept">
+        <div class="concept-title">
+        <h2>Text Editors for Programming</h2>
+        </div>
+            <p>
+            You can use special text editors (like Sublime Text for example). These editors make the programmer's life easier. For example, some text editors will automatically generate a closing HTML tag when you write an opening tag.
+            </p>
+        </div>
+    <div class="concept">
+     <div class="concept-title">
+        <h2>The Importance of avoiding repetition</h2>
+          <p>
+          Clean and well structured code should avoid repetition.<br>
+          That will make making updates to style MUCH easier, as well as will simplify debugging.
+          </p>
+      </div>
+     </div>
+    </div>
+    <div class="lesson">
+    <div class="lesson-title">
+    <h1>Lesson 3
+      <br>
+      How HTML works with CSS</h1>
+    </div>
+      <div class="concept">
+        <div class="concept-title">
+        <h2>How to include CSS Styling in my web page?</h2>
+        </div>
+            <h3>Method 1: write CSS in the "head" of your HTML</h3>
+               <p>
+               This method is good for very small projects (like what you'd do in scratchpad.io). To do this: 1. At the top of your HTML document, add a "head" element. 2. Inside the "head" element, add a "style" element. 3. Write your CSS in the "style" element and then put the HTML for the rest of your page below. 
+               </p>
+            <h3>Method 2: Link your HTML to a separate CSS file</h3>
+               <p>
+               This adds another step, but it lets you stay more organized when working on larger projects. To do this: 
+               </p>
+                 <ol>
+                    <li>Write all of your structural HTML in one file (let's call itmain.html).</li>
+                    <li>In a separate file (let's call it main.css), put all of your CSS code.</li>
+                    <li>Add a "head" element to the top of your HTML.</li> 
+                    <li>Add a "link" tag inside the "head" element. Since "link" is a "void tag" you don't need to add a closing "/link".</li>
+                    <li>Add the following attributes to your "link": * rel="stylesheet" *type="text/css" * href="main.css"</li>
+                </ol>
+            <h3>Method 3: Write your style <i>inline</i> with your HTML</h3>
+               <p>
+               This is generally a very bad idea because it leads to lots of repeated code 
+               </p>
+      </div>
+ <div class="concept">
+        <div class="concept-title">
+        <h2>The Box Model</h2>
+        </div>
+             <h3>Margin, Border, padding & content</h3>
+                <div>
+                  <a href="https://www.flickr.com/photos/frfrdufour/16735932001" title="Box Model by Francois, on Flickr"><img src="https://farm9.staticflickr.com/8622/16735932001_ebf7c2e2f3_o.png" width="448" height="252" alt="Box Model"></a></div>
+                 <p>
+                 The padding clears an area around the content. It’s affected by the background color of the box.<br>
+                 The border is inherited by the color property of the box.<br> 
+                 The margin is the outer layer and clears an area around the border. Does not have a background color and is completely transparent, like a space btw boxes.<br>
+                 So the dimension of your element = content + padding + border. I.e. we ignore margin.<br> 
+                 </p>
+            <h3>Box Sizing</h3>
+                 <p>
+                 There are two techniques you can use to help deal with sizing issues: 
+                 </p>
+                   <ol>
+                      <li>Set sizes in terms of percents rather than pixels.</li>
+                      <li>Set the box-sizing attribute to border-box for every element.</li>
+                   </ol>
+            <h3>Box Positioning</h3>
+                <ol>
+                <li>Divs are block elements (as opposed to inline), so by default they take up the entire width of a page.</li>
+                <li>Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other.</li>
+                </ol>
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+        <h2>Getting your code right</h2>
+        </div>
+              <h3>Code, Test, Refine</h3>
+                  <ol>
+                    <li>look for natural boxes from the design </li>
+                    <li>Look for repeated styles and semantic elements </li>
+                    <li>write your HTML </li>
+                    <li>Apply Styles (from BIGGEST to smallest) </li> 
+                    <li>Fix things - developer tools can help with that. </li>
+                  </ol>
+              <h3>Verifying your Code for various browsers</h3>
+                 <ol>
+                   <li>To verify HTML: use <a href=
+                                          "http://validator.w3.org/#validate_by_input">WC3</a> </li>
+                   <li>To verify CSS: use <a href="
+                     http://jigsaw.w3.org/css-validator/#validate_by_input">WC3</a> too!</li>
+                 </ol>
+        </div>
+ </div>
+</body>
+</html>
+
